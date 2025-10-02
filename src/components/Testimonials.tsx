@@ -4,23 +4,23 @@ import { Card, CardContent } from '@/components/ui/card';
 const Testimonials = () => {
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      role: 'Product Manager, TechCorp',
-      content: 'SOND 3D helped us rapidly prototype our product ideas. Their attention to detail and quick turnaround time was instrumental in our product launch.',
-      rating: 5,
-    },
-    {
-      name: 'Michael Chen',
-      role: 'Independent Designer',
-      content: 'The quality of prints is exceptional. SOND 3D brings my creative visions to life with precision that exceeds expectations every single time.',
-      rating: 5,
-    },
-    {
-      name: 'Emily Rodriguez',
-      role: 'Manufacturing Lead, InnovateCo',
-      content: 'Professional service from start to finish. Their design consultation helped us refine our concept, and the final products were flawless.',
-      rating: 5,
-    },
+    name: 'Jon Mook',
+    role: 'Client',
+    content: 'SOND 3D designed and delivered a fully customized chess board for my son. They perfectly incorporated personal touches into the design, and the final product was of outstanding quality. A thoughtful and unique gift made possible by their craftsmanship.',
+    rating: 5,
+  },
+  {
+    name: 'Bryan',
+    role: 'Parent',
+    content: 'SOND 3D helped us create a bottle prototype for my son’s school project. The design was accurate, the print quality was excellent, and it made the project stand out. I really appreciated their responsiveness and creativity.',
+    rating: 5,
+  },
+  {
+    name: 'Sukhwinder Singh',
+    role: 'Client',
+    content: 'I needed a replacement part for my machinery, and SOND 3D delivered exactly what I needed. The precision and durability of the print saved me time and money, and I’ll definitely return for future needs.',
+    rating: 5,
+  },
   ];
 
   return (

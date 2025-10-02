@@ -5,6 +5,10 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 
+// ⬅️ 1. Define your Formspree URL here
+const FORMSPREE_URL = 'https://formspree.io/f/mkgqbqrw';
+// NOTE: You will need to sign up for Formspree to get this ID.
+
 const Contact = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
@@ -14,21 +18,6 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: 'Message sent successfully!',
-        description: "We'll get back to you as soon as possible.",
-      });
-      setFormData({ name: '', email: '', message: '' });
-      setIsSubmitting(false);
-    }, 1000);
-  };
-
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -36,6 +25,45 @@ const Contact = () => {
       ...formData,
       [e.target.name]: e.target.value,
     });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch(FORMSPREE_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        toast({
+          title: 'Message sent successfully!',
+          description: "We'll get back to you as soon as possible.",
+        });
+        // Clear the form on success
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        // Handle errors, e.g., validation failure from Formspree
+        toast({
+          title: 'Submission Failed',
+          description: 'There was an issue sending your message. Please try again.',
+          variant: 'destructive',
+        });
+      }
+    } catch (error) {
+      toast({
+        title: 'Network Error',
+        description: 'Could not connect to the server. Check your internet connection.',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -57,8 +85,9 @@ const Contact = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Contact Info */}
+          {/* Contact Info (No changes needed here) */}
           <div className="space-y-8 animate-fade-in">
+            {/* ... Contact Info Content ... */}
             <div className="bg-card p-8 rounded-2xl shadow-medium">
               <h3 className="text-2xl font-bold text-foreground mb-6">
                 Get in Touch
@@ -176,6 +205,24 @@ const Contact = () => {
                   className="w-full resize-none"
                 />
               </div>
+
+              {/* ⬅️ Add a hidden field to set the recipient email */}
+              <input 
+                type="hidden" 
+                name="_replyto" 
+                value={formData.email} 
+              />
+              <input 
+                type="hidden" 
+                name="_subject" 
+                value="New Contact Form Submission from SOND 3D WEBSITE" 
+              />
+              <input 
+                type="hidden" 
+                name="_to" 
+                value="aryanbhanot2005@gmail.com" 
+              />
+
 
               <Button
                 type="submit"

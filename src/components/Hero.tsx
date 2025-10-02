@@ -60,7 +60,7 @@ const Hero = () => {
           </div>
 
           {/* Trust indicators */}
-          <div className="pt-12 flex flex-wrap justify-center gap-8 text-primary-foreground/80">
+          {/* <div className="pt-12 flex flex-wrap justify-center gap-8 text-primary-foreground/80">
             <div className="text-center">
               <div className="text-3xl font-bold text-accent">500+</div>
               <div className="text-sm">Projects Completed</div>
@@ -73,8 +73,8 @@ const Hero = () => {
               <div className="text-3xl font-bold text-accent">24/7</div>
               <div className="text-sm">Support Available</div>
             </div>
-          </div>
-        </div>
+          </div> */}
+        </div>  
       </div>
 
       {/* Scroll indicator */}
