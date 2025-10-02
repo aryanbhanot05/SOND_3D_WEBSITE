@@ -1,73 +1,33 @@
-# Welcome to your Lovable project
+# 🌐 SOND 3D WEBSITE
 
-## Project info
+A modern, interactive 3D website built with React, Vite, and Tailwind CSS. This site showcases a professional portfolio or product using cutting-edge web technologies and a sleek, animated design.
 
-**URL**: https://lovable.dev/projects/36109ddf-f4a4-4439-8f90-f1e19e63b8fc
+## 🚀 Live Deployment
 
-## How can I edit this code?
+You can view the live, deployed version of the website here:
 
-There are several ways of editing your application.
+**[SOND 3D](https://sond3d.vercel.app/)**
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/36109ddf-f4a4-4439-8f90-f1e19e63b8fc) and start prompting.
+## ✨ Key Features
 
-Changes made via Lovable will be committed automatically to this repo.
+* **Modern Stack:** Built on Vite, React, and TypeScript for a fast, type-safe development experience.
+* **Responsive Design:** Uses Tailwind CSS for a utility-first approach and full responsiveness.
+* **Interactive UI:** Features UI components from `shadcn-ui` for a polished look and feel.
+* **3D Capabilities:** Ready for 3D integration (e.g., Three.js, R3F) to handle 3D models and scenes.
+* **Optimized Performance:** Fast loading times thanks to Vite's build tooling.
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🛠️ Technology Stack
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+This project is built with the following modern tools and frameworks:
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/36109ddf-f4a4-4439-8f90-f1e19e63b8fc) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+| Category | Technology | Description |
+| :--- | :--- | :--- |
+| **Framework** | **React** | The core JavaScript library for building the user interface. |
+| **Build Tool** | **Vite** | Next-generation frontend tooling for blazing-fast development. |
+| **Language** | **TypeScript** | Adds static type-checking to JavaScript for robust code. |
+| **Styling** | **Tailwind CSS** | Utility-first CSS framework for rapid and consistent styling. |
+| **UI Components** | **shadcn-ui** | Accessible and customizable component library built on Tailwind CSS. |
